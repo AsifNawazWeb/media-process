@@ -1,0 +1,27 @@
+# deps
+/node_modules
+
+# next
+/.next/
+/out/
+next-env.d.ts
+*.tsbuildinfo
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*
+.env*
+
+# vendored AI model assets (~167MB) — run `npm run setup:model`
+/public/imgly/
+
+# fixtures for tests/smoke
+/public/fixtures/
+/tmp
+
+# vendor temp
+/.vendor-tmp/
