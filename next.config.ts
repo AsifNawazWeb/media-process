@@ -16,6 +16,14 @@ const nextConfig: NextConfig = {
         ],
       },
       {
+        // The service worker must never be served stale.
+        source: "/sw.js",
+        headers: [
+          { key: "Cache-Control", value: "no-cache, no-store, must-revalidate" },
+          { key: "Content-Type", value: "application/javascript; charset=utf-8" },
+        ],
+      },
+      {
         // Cross-origin isolation enables SharedArrayBuffer → multithreaded WASM
         // for onnxruntime-web (major segmentation speedup).
         source: "/:path*",
